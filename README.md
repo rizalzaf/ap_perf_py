@@ -3,7 +3,7 @@
 This repository provides a Python interface to the [AdversarialPrediction.jl](https://github.com/rizalzaf/AdversarialPrediction.jl). Using this repository, we can integrate the [adversarial prediction]() formulation over generic performance metrics into differentiable learning pipeline of PyTorch. The implementation is based on the paper: ["AP-Perf: Incorporating Generic Performance Metrics in Differentiable Learning"]() by [Rizal Fathony](http://rizal.fathony.com) and [Zico Kolter](http://zicokolter.com). 
 Please check the tutorial of the [AdversarialPrediction.jl](https://github.com/rizalzaf/AdversarialPrediction.jl) first, before continuing this tutorial.
 
-> Note: A pure Python implementation of the AdversarialPrediction.jl is coming soon.
+> **Note: A pure Python implementation of the AdversarialPrediction.jl is coming soon.**
 
 ## Overview
 
