@@ -167,7 +167,7 @@ We provide a simple example for integrating  `ap-perf-py` into PyTorch code for 
 
 ## Citation
 
-Please cite the following papers if you use this repository for your research.
+Please cite the following paper if you use this repository for your research.
 
 ```
 @article{ap-perf,
