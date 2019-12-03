@@ -173,7 +173,7 @@ Please cite the following paper if you use this repository for your research.
 @article{ap-perf,
   title={AP-Perf: Incorporating Generic Performance Metrics in Differentiable Learning},
   author={Fathony, Rizal and Kolter, Zico},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  journal={arXiv preprint arXiv:1912.00965},
   year={2019}
 }
 ```
