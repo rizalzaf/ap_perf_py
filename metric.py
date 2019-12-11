@@ -1,8 +1,5 @@
 # set package
-from julia import Pkg
 from julia import Main
-
-Pkg.activate("../AdversarialPrediction")
 
 Main.eval("using AdversarialPrediction")
 Main.eval("import AdversarialPrediction: define, constraint")
