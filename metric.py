@@ -41,13 +41,3 @@ class Metric:
 
     def objective(self, psi, y):
         return Main.objective(self.pm, psi, y)
-
-    @staticmethod
-    def set_solver(val):
-        if val == "GUROBI":
-            Main.eval("using JuMP")
-            Main.eval("using Gurobi")
-            Main.eval("const GUROBI_ENV = Gurobi.Env()")
-        else:
-            Main.eval("using JuMP")
-            Main.eval("using ECOS")

@@ -76,8 +76,6 @@ function define(::Type{FBeta}, C::ConfusionMatrix, beta)
 end   
 """
 
-Metric.set_solver("GUROBI")
-
 f2 = Metric(fbeta_str)
 f2.initialize(2.0)
 f2.special_case_positive()

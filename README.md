@@ -1,9 +1,7 @@
 # ap-perf-py
 
-This repository provides a Python interface to the [AdversarialPrediction.jl](https://github.com/rizalzaf/AdversarialPrediction.jl). Using this repository, we can integrate the adversarial prediction formulation over generic performance metrics into differentiable learning pipeline of PyTorch. The implementation is based on the paper: ["AP-Perf: Incorporating Generic Performance Metrics in Differentiable Learning"](http://arxiv.org/abs/1912.00965) by [Rizal Fathony](http://rizal.fathony.com) and [Zico Kolter](http://zicokolter.com). 
-Please check the tutorial of the [AdversarialPrediction.jl](https://github.com/rizalzaf/AdversarialPrediction.jl) first, before continuing this tutorial.
-
-**Note: A pure Python implementation of the AdversarialPrediction.jl is coming soon.**
+This repository provides a Python interface to the [AdversarialPrediction.jl](). Using this repository, we can integrate the [adversarial prediction]() formulation over generic performance metrics into differentiable learning pipeline of PyTorch. The implementation is based on the paper: ["AP-Perf: Incorporating Generic Performance Metrics in Differentiable Learning"]() by [Rizal Fathony](http://rizal.fathony.com) and [Zico Kolter](http://zicokolter.com). 
+Please check the tutorial of [AdversarialPrediction.jl]() first, before continuing this tutorial.
 
 ## Overview
 
@@ -67,14 +65,8 @@ criterion = nn.BCEWithLogitsLoss().to(device)
 To use this repository, simply download it and copy it into a local folder. Given we have installed Julia and PyJulia, we can install AdversarialPrediction.jl and its dependency packages in Julia from Python using the following code:
 ```python
 import install
-install.install_with_gurobi()
+install.install()
 ```
-if we want to use `Gurobi` as the LP solver or
-```python
-import install
-install.install_no_gurobi()
-```
-if we do not have access to Gurobi. For `install_with_gurobi()`, Gurobi executable must be available in the system PATH.
 Note that we have to run Python from the directory of this project to run the codes above. 
 
 
@@ -85,7 +77,6 @@ Below is an example of defining the F-2 score with the F-beta class.
 
 ```python
 from metric import Metric
-Metric.set_solver("GUROBI")
 
 ## Precision given recall
 fbeta_str = """ 
@@ -106,7 +97,6 @@ To instantiate a metric object, we can write pythonic codes, as shown above. If 
 Below is an example for the case of metric with constraints:
 ```python
 from metric import Metric
-Metric.set_solver("GUROBI")
 
 ## Precision given recall
 precrec_str = """
@@ -124,8 +114,6 @@ precrec80.initialize(0.8)
 precrec80.special_case_positive()
 precrec80.cs_special_case_positive(True)
 ```
-
-Note that if we want to use `Gurobi` as the LP solver, we need to write `Metric.set_solver("GUROBI")` before initializing the metric. Otherwise, `ECOS` will be used as the solver.
 
 ## Computing the Values of the Metric
 
@@ -167,13 +155,13 @@ We provide a simple example for integrating  `ap-perf-py` into PyTorch code for 
 
 ## Citation
 
-Please cite the following paper if you use this repository for your research.
+Please cite the following papers if you use this repository for your research.
 
 ```
 @article{ap-perf,
   title={AP-Perf: Incorporating Generic Performance Metrics in Differentiable Learning},
   author={Fathony, Rizal and Kolter, Zico},
-  journal={arXiv preprint arXiv:1912.00965},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
   year={2019}
 }
 ```
